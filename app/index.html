@@ -5,11 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    
+  <header class="header">
+    <div class="logo header__logo">
+      <a href="#">
+        <img src="images/logo.png" alt="logo">
+      </a>
+    </div>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="#flats">Flats</a></li>
+        <li><a href="#houses">Houses</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="slider">
+    <div class="slider__items">
+      <div class="slider__item" style="background-image: url(images/slider-item1.jpg);"></div>
+      <div class="slider__item" style="background-image: url(images/slider-item2.jpg);"></div>
+      <div class="slider__item" style="background-image: url(images/slider-item3.jpg);"></div>
+    </div>
+  </section>
+  <section class="search">
+    <div class="search__inner">
+      <form class="search__form">
+        <label>Search <br>Apartments</label>
+        <input type="text" placeholder="Enter a district" required>
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </section>
+  <section class="popular">
+    <div class="popular__title">
+      Most popular options
+    </div>
+    <div class="container">
+      <div class="popular__inner">
+        <div class="popular__item">
+          <img class="popular__item-img" src="images/popular1.jpg" alt="">
+          <div class="popular__item-title">Hillside House <br> London</div>
+          <a class="popular__item-link" href="">Details</a>
+        </div>
+        <div class="popular__item">
+          <img class="popular__item-img" src="images/popular2.jpg" alt="">
+          <div class="popular__item-title">Starlight Luxury Rooms <br> Paris</div>
+          <a class="popular__item-link" href="">Details</a>
+        </div>
+        <div class="popular__item">
+          <img class="popular__item-img" src="images/popular3.jpg" alt="">
+          <div class="popular__item-title">Indigo Inn <br> Los Angeles</div>
+          <a class="popular__item-link" href="">Details</a>
+        </div>
+        <div class="popular__item">
+          <img class="popular__item-img" src="images/popular4.jpg" alt="">
+          <div class="popular__item-title">Casa De Fiori Apartments <br> Rome</div>
+          <a class="popular__item-link" href="">Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+
+
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>

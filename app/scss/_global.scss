@@ -1,0 +1,38 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+body {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: $white;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.popular__title,
+.rate__title {
+  font-size: 30px;
+  line-height: 30px;
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}

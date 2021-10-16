@@ -1,11 +1,145 @@
-html {
-	box-sizing: border-box;
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+
+//start header
+.header {
+  text-align: center;
 }
-*,
-*::after,
-*::before {
-	box-sizing: inherit;
+.header__logo {
+  padding: 10px 0 20px;
 }
-body {
-    display: flex;
+.menu {
+  border-top: 2px solid $blue;
+  border-bottom: 2px solid $blue;
 }
+.menu__list {
+  display: flex;
+  justify-content: center;
+  li {
+    width: 240px;
+    &:last-child {
+      border-right: 2px solid $blue;
+    }
+  }
+  a {
+    text-transform: uppercase;
+    font-size: 23px;
+    line-height: 24px;
+    color: $blue;
+    display: block;
+    padding: 15px 10px 15px;
+    border-left: 2px solid $blue;
+    transition: all .3s;
+    &.active,
+    &:hover {
+      color: $white;
+      background-color: $blue;
+    }
+    &:active {
+      background-color: darken($blue, 10);
+    }
+  }
+}
+//end header
+//start slider
+.slider__item {
+    min-height: 600px;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slick-arrow {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  cursor: pointer;
+}
+.slick-prev {
+  right: 25px;
+}
+.slick-next {
+  left: 25px;
+}
+//end slider
+//start search
+.search__inner {
+  padding: 60px 0 80px;
+}
+.search__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  label {
+    color: $blue;
+    font-size: 25px;
+    line-height: 25px;
+    margin-right: 50px;
+  }
+  input {
+    height: 50px;
+    width: 400px;
+    padding: 0 10px;
+    border: 2px solid $blue;
+    color: $blue;
+    border-radius: 8px;
+    &::placeholder {
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+  button {
+    border: none;
+    background-color: $blue;
+    color: $white;
+    font-size: 25px;
+    padding: 11px 25px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+}
+//end search
+//start popular
+.popular {
+  text-align: center;
+}
+.popular__title {
+  background-color: $blue;
+  padding: 10px 15px;
+  text-align: center;
+}
+.popular__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0;
+}
+.popular__item {
+  &-img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  &-title {
+    padding: 15px 10px;
+    font-size: 23px;
+    line-height: 23px;
+    font-weight: 400;
+    color: $blue;
+  }
+  &-link {
+    background-color: $blue;
+    color: $white;
+    text-decoration: none;
+    padding: 8px 48px;
+    border-radius: 8px;
+  }
+}
+//end popular
+
