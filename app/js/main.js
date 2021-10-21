@@ -1,6 +1,7 @@
 $(function(){
-  $('.slider__items').slick({
-    prevArrow: '<button class="slick-arrow slick-prev"><img src="images/arrow-right.svg" alt=""></button>',
-    nextArrow: '<button class="slick-arrow slick-next"><img src="images/arrow-right.svg" alt=""></button>',
+  $('.slider__items, .news__slider-inner').slick({
+    prevArrow: '<button class="slick-btn slick-prev"></button>',
+    nextArrow: '<button class="slick-btn slick-next"></button>',
+    infinite: false
   });
 });

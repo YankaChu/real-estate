@@ -44,27 +44,56 @@
 }
 //end header
 //start slider
+.slider {
+  button {
+     margin: 0 50px;
+  }
+}
+.slider__items {
+  position: relative;
+}
+.slick-btn{
+	position: absolute;
+	top: 50%;
+	z-index: 3;
+	width: 40px;
+	height: 40px;
+	border: 1px solid $white;
+	cursor: pointer;
+	outline: none;
+	background-color: $blue;
+  &::before {
+    position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  font-family: 'icomoon';
+    transform: translate(-50%, -50%);
+    color: $white;
+  }
+}
+.slick-prev:before{
+  content: "\ea40"
+}
+.slick-next:before{
+	content: "\ea3c";
+}
+.slick-next{
+	right: 0;
+}
+.slick-prev{
+	left: 0;
+}
+.slick-btn.slick-disabled{
+	cursor: default;
+	background-color: transparent;
+}
 .slider__item {
     min-height: 600px;
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.slick-arrow {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  position: absolute;
-  top: 50%;
-  z-index: 5;
-  cursor: pointer;
-}
-.slick-prev {
-  right: 25px;
-}
-.slick-next {
-  left: 25px;
-}
+
 //end slider
 //start search
 .search__inner {
@@ -142,4 +171,181 @@
   }
 }
 //end popular
-
+//start rate
+.rate {
+  background-color: $blue;
+  padding: 100px 0 60px;
+}
+.rate__inner {
+  display: flex;
+}
+.rate__box {
+  margin-top: 100px;
+  &-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+.rate__img {
+  min-height: 577px;
+  margin-right: 45px;
+}
+.rate__title {
+    margin-bottom: 40px;
+}
+.rate__box-item {
+  margin-bottom: 25px;
+}
+//end rate
+//start news
+.news{
+	padding: 50px 0 100px;
+}
+.news__top{
+	display: flex;
+	justify-content: space-between;
+  color: $blue;
+	margin-bottom: 70px;
+}
+.news__title-box{
+	max-width: 540px;
+	padding-left: 15px;
+}
+.news__title{
+	margin-bottom: 10px;
+}
+.news__btn {
+  a {
+    color: $blue;
+	  line-height: 24px;
+	  padding: 9px 40px;
+	  border: 2px solid $blue;
+  }
+}
+.news__inner {
+  display: flex;
+	justify-content: space-between;
+}
+.news__slider-inner {
+  width: 100%;
+  max-width: 555px;
+  position: relative;
+}
+.news__slider-item {
+    min-height: 440px;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.news__slider-title {
+  background-color: $blue;
+  padding: 5px 10px;
+  margin-top: 50px;
+  text-align: center;
+}
+.news__blog{
+  font-family: 'PT Serif', serif;
+	max-width: 280px;
+	width: 100%;
+  &-title {
+	  color: $blue;
+	  padding: 12px 0;
+    font-size: 23px;
+    line-height: 23px;
+  }
+  &-text {
+    color: #796990;
+  }
+}
+.news__images{
+	position: relative;
+}
+.news__date{
+	position: absolute;
+	background-color: $blue;
+	height: 60px;
+	width: 55px;
+	color: $white;
+	text-align: center;
+	padding-top: 30px;
+	top: 0;
+	left: 10px;	
+}
+.news__slider-inner .slick-btn{
+	top: auto;
+	bottom: -70px;
+} 
+.news__slider-inner .slick-prev{
+	right: 50px;
+	left: auto;
+}
+.news__slider-inner .slick-disabled{
+	border-color: $blue;
+}
+.news__slider-inner .slick-btn {
+  color: $blue;
+}
+//end news
+//start footer
+.footer__content{
+	background-color: $blue;
+	padding: 20px 0 25px;
+}
+.footer__inner{
+	display: flex;
+	justify-content: space-between;
+}
+.footer__info{
+	max-width: 360px;
+}
+.footer__title{
+ 	font-size: 24px;
+ 	line-height: 25px;
+  margin-bottom: 20px;
+}
+.footer__text{
+  margin-bottom: 23px;
+}
+.footer__list{
+	padding-top: 15px;
+  li {
+    margin-top: 10px;
+  }
+  a {
+    font-size: 19px;
+	  line-height: 24px;
+	  color: #fff;
+	  padding-left: 30px;
+	  position: relative;
+    &::before {
+      content: "\e945";
+	    position: absolute;
+	    left: 0;
+	    color: $white;
+	    font-family: 'icomoon';
+    }
+  }
+  .footer__phone:before{
+	  content: "\e942";
+  }
+  .footer__adress:before{
+	  content: "\e947";
+  }
+}
+.footer__map{
+	padding-top: 10px;
+	max-width: 600px;
+	width: 100%;
+  iframe {
+    width: 100%;
+  }
+}
+.footer__copy{
+  color: $blue;
+	text-align: center;
+	font-size: 13px;
+	line-height: 16px;
+	padding: 13px 0;
+  border-bottom: 1px solid $blue;
+}
+//end footer
