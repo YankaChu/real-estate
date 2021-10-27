@@ -19,8 +19,11 @@
   justify-content: center;
   li {
     width: 240px;
+    &:first-child {
+      border-left: 1px solid $blue;
+    }
     &:last-child {
-      border-right: 2px solid $blue;
+      border-right: 1px solid $blue;
     }
   }
   a {
@@ -146,6 +149,7 @@
 .popular__inner {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 80px 0;
 }
 .popular__item {
@@ -187,7 +191,6 @@
   }
 }
 .rate__img {
-  min-height: 577px;
   margin-right: 45px;
 }
 .rate__title {
@@ -215,6 +218,7 @@
 	margin-bottom: 10px;
 }
 .news__btn {
+  margin-right: 10px;
   a {
     color: $blue;
 	  line-height: 24px;
@@ -349,3 +353,5 @@
   border-bottom: 1px solid $blue;
 }
 //end footer
+
+@import 'media';
